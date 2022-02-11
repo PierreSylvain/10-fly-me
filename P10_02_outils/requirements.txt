@@ -1,0 +1,10 @@
+aiohttp
+botbuilder-core
+botbuilder-applicationinsights
+botbuilder-integration-applicationinsights-aiohttp
+datatypes-date-time
+botbuilder-dialogs
+opencensus
+opencensus-ext-azure
+botbuilder-ai
+

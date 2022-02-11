@@ -1,0 +1,226 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "Airline Reservation",
+  "desc": "A LUIS model that uses intent and entities.",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "book"
+    },
+    {
+      "name": "Cancel"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [
+    {
+      "name": "or_city",
+      "children": [
+        "Airport"
+      ],
+      "roles": []
+    },
+    {
+      "name": "dst_city",
+      "children": [
+        "Airport"
+      ],
+      "roles": []
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "Airport",
+      "subLists": [
+        {
+          "canonicalForm": "Paris",
+          "list": [
+            "paris"
+          ]
+        },
+        {
+          "canonicalForm": "London",
+          "list": [
+            "london"
+          ]
+        },
+        {
+          "canonicalForm": "Berlin",
+          "list": [
+            "berlin"
+          ]
+        },
+        {
+          "canonicalForm": "New York",
+          "list": [
+            "new york"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "book flight from london to paris on feb 14th",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 27,
+          "endPos": 31
+        },
+        {
+          "entity": "or_city",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "book flight to berlin on feb 14th",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 15,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "book me a flight from london to paris",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "or_city",
+          "startPos": 22,
+          "endPos": 27
+        },
+        {
+          "entity": "dst_city",
+          "startPos": 32,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "bye",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "cancel booking",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "exit",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "flight to paris",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "flight to paris from london on feb 14th",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 10,
+          "endPos": 14
+        },
+        {
+          "entity": "or_city",
+          "startPos": 21,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "fly from berlin to paris on may 5th",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 19,
+          "endPos": 23
+        },
+        {
+          "entity": "or_city",
+          "startPos": 9,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "go to paris",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 6,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "going from paris to berlin",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 20,
+          "endPos": 25
+        },
+        {
+          "entity": "or_city",
+          "startPos": 11,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "ignore",
+      "intent": "Cancel",
+      "entities": []
+    },
+    {
+      "text": "travel to paris",
+      "intent": "book",
+      "entities": [
+        {
+          "entity": "dst_city",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    }
+  ],
+  "settings": []
+}
